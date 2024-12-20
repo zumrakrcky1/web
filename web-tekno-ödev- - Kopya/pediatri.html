@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pediatri Bölümü</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pediatri Bölümü</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-left">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#hero">Ana Sayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="asistanlarimiz.html">Asistanlarımız</a></li>
+                        <li class="nav-item"><a class="nav-link" href="doktorlarimiz.html">Doktorlarımız</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quiz.html">Hastane Quiz </a></li>
+                        <li class="nav-item"><a class="nav-link" href="acil.html">Acil Durum </a></li>
+                        <li class="nav-item"><a class="nav-link" href="takvim.html">Nöbet Takvimi </a></li>
+
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#departments">Bölümler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#announcements">Duyurular</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="container text-center">
+            <h1>Pediatri Bölümü</h1>
+            <p class="lead" >Çocuklarımız için en iyi hizmeti sunuyoruz.</p>
+            
+        </div>
+    </header>
+    
+    <!-- Bölümler -->
+
+    <section class="departments py-5" id="departments">
+        <div class="container text-center">
+            <h2 class="mb-4">
+                <a href="bölümler.html" class="text-decoration-none" style="color: black;">Bölümlerimiz</a>
+            </h2>
+            
+            <div class="row">
+            
+                
+                <!-- Çocuk Acil Kartı -->
+                <div class="col-md-4">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#childEmergencyModal">
+                        <img src="C:\Users\Acer Predator\Downloads\çocukacil.jpg" class="card-img-top" alt="Çocuk Acil">
+                        <div class="card-body">
+                            <h5 class="card-title">Çocuk Acil</h5>
+                            <p class="card-text">Acil durumlarda uzman kadromuz ile yanınızdayız.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Çocuk Yoğun Bakımı Kartı -->
+                <div class="col-md-4">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#childICUModal">
+                        <img src="C:\Users\Acer Predator\Downloads\yogunbakim.jpg" class="card-img-top" alt="Yoğun Bakım">
+                        <div class="card-body">
+                            <h5 class="card-title">Çocuk Yoğun Bakımı</h5>
+                            <p class="card-text">Hayati önem taşıyan bakımlar için özel hizmetler.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Çocuk Hematolojisi ve Onkolojisi Kartı -->
+                <div class="col-md-4">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#childHematologyModal">
+                        <img src="C:\Users\Acer Predator\Downloads\hemotolji.jpg" class="card-img-top" alt="Hematoloji ve Onkoloji">
+                        <div class="card-body">
+                            <h5 class="card-title">Çocuk Hematolojisi ve Onkolojisi</h5>
+                            <p class="card-text">Tedavi ve bakımda dünya standartlarında hizmet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Çocuk Acil Modal (Popup) -->
+    <div class="modal fade" id="childEmergencyModal" tabindex="-1" aria-labelledby="childEmergencyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="childEmergencyModalLabel">Çocuk Acil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Açıklama:</strong> Çocukların acil sağlık sorunları ile ilgilenilen bölümdür. Acil müdahale gerektiren durumlarda hizmet verilmektedir.</p>
+                    <p><strong>Uzmanlık Alanları:</strong> Çocuk Acil Tedavisi, Acil Cerrahi Müdahale</p>
+                    <p><strong>Hastalar:</strong> <span id="childEmergencyPatients">3500</span></p>
+                    <p><strong>Boş Yataklar:</strong> <span id="childEmergencyBeds">15</span></p>
+    
+                    <!-- Dinamik Güncelleme Alanı -->
+                    <h5 class="mt-3">Bilgileri Güncelle</h5>
+                    <div>
+                        <label for="updatePatients">Yeni Hasta Sayısı:</label>
+                        <input type="number" id="updatePatients" class="form-control" placeholder="Hasta Sayısını Girin">
+                    </div>
+                    <div>
+                        <label for="updateBeds" class="mt-2">Yeni Boş Yatak Sayısı:</label>
+                        <input type="number" id="updateBeds" class="form-control" placeholder="Boş Yatak Sayısını Girin">
+                    </div>
+                    <button class="btn btn-primary mt-3" onclick="updateDepartmentInfo('childEmergency')">Güncelle</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Çocuk Yoğun Bakımı Modal (Popup) -->
+    <div class="modal fade" id="childICUModal" tabindex="-1" aria-labelledby="childICUModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="childICUModalLabel">Çocuk Yoğun Bakımı</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Açıklama:</strong> Çocukların yoğun bakım gerektiren sağlık durumlarının tedavi edildiği bölümdür. Kritik durumdaki hastalar için hayati öneme sahiptir.</p>
+                    <p><strong>Uzmanlık Alanları:</strong> Yoğun Bakım, Mekanik Ventilasyon, Nörolojik İzlem</p>
+                    <p><strong>Hastalar:</strong> <span id="childICUPatients">800</span></p>
+                    <p><strong>Boş Yataklar:</strong> <span id="childICUBeds">5</span></p>
+    
+                    <!-- Dinamik Güncelleme Alanı -->
+                    <h5 class="mt-3">Bilgileri Güncelle</h5>
+                    <div>
+                        <label for="updateICUPatients">Yeni Hasta Sayısı:</label>
+                        <input type="number" id="updateICUPatients" class="form-control" placeholder="Hasta Sayısını Girin">
+                    </div>
+                    <div>
+                        <label for="updateICUBeds" class="mt-2">Yeni Boş Yatak Sayısı:</label>
+                        <input type="number" id="updateICUBeds" class="form-control" placeholder="Boş Yatak Sayısını Girin">
+                    </div>
+                    <button class="btn btn-primary mt-3" onclick="updateDepartmentInfo('childICU')">Güncelle</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Çocuk Hematolojisi ve Onkolojisi Modal (Popup) -->
+    <div class="modal fade" id="childHematologyModal" tabindex="-1" aria-labelledby="childHematologyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="childHematologyModalLabel">Çocuk Hematolojisi ve Onkolojisi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Açıklama:</strong> Çocukluk çağındaki kanser ve kan hastalıklarının tedavi edildiği bölümdür. Tedavi ve bakımda dünya standartlarında hizmet verilmektedir.</p>
+                    <p><strong>Uzmanlık Alanları:</strong> Pediatrik Onkoloji, Kanser Tedavisi, Kemoterapi</p>
+                    <p><strong>Hastalar:</strong> <span id="childHematologyPatients">1200</span></p>
+                    <p><strong>Boş Yataklar:</strong> <span id="childHematologyBeds">8</span></p>
+    
+                    <!-- Dinamik Güncelleme Alanı -->
+                    <h5 class="mt-3">Bilgileri Güncelle</h5>
+                    <div>
+                        <label for="updateHematologyPatients">Yeni Hasta Sayısı:</label>
+                        <input type="number" id="updateHematologyPatients" class="form-control" placeholder="Hasta Sayısını Girin">
+                    </div>
+                    <div>
+                        <label for="updateHematologyBeds" class="mt-2">Yeni Boş Yatak Sayısı:</label>
+                        <input type="number" id="updateHematologyBeds" class="form-control" placeholder="Boş Yatak Sayısını Girin">
+                    </div>
+                    <button class="btn btn-primary mt-3" onclick="updateDepartmentInfo('childHematology')">Güncelle</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function updateDepartmentInfo(department) {
+            if (department === 'childEmergency') {
+                var patients = document.getElementById('updatePatients').value;
+                var beds = document.getElementById('updateBeds').value;
+                if (patients) document.getElementById('childEmergencyPatients').innerText = patients;
+                if (beds) document.getElementById('childEmergencyBeds').innerText = beds;
+            } else if (department === 'childICU') {
+                var patients = document.getElementById('updateICUPatients').value;
+                var beds = document.getElementById('updateICUBeds').value;
+                if (patients) document.getElementById('childICUPatients').innerText = patients;
+                if (beds) document.getElementById('childICUBeds').innerText = beds;
+            } else if (department === 'childHematology') {
+                var patients = document.getElementById('updateHematologyPatients').value;
+                var beds = document.getElementById('updateHematologyBeds').value;
+                if (patients) document.getElementById('childHematologyPatients').innerText = patients;
+                if (beds) document.getElementById('childHematologyBeds').innerText = beds;
+            }
+        }
+    </script>
+    
+    </body>
+    </html>
+    
+<!-- Duyurular -->
+<section class="announcements py-5 bg-light" id="announcements">
+    <div class="container text-center">
+        <h2 class="mb-4">Duyurular</h2>
+        <div id="announcementCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>📢 <strong>Yeni hizmet içi eğitimler başladı!</strong> Eğitim tarihlerini öğrenmek için duyuruyu takip edin.</p>
+                </div>
+                <div class="carousel-item">
+                    <p>🏆 <strong>Akademik başarılarımız güncellendi.</strong> Yeni başarılarla ilgili detayları görmek için <a href="basarialrimiz.html" style="text-decoration: underline; color: #007bff;">tıklayın</a>.</p>
+                </div>
+                <div class="carousel-item">
+                    <p>💡 <strong>Yeni pediatri rehberleri yayınlandı.</strong> En son rehberlere ulaşmak için duyurumuzu takip edin.</p>
+                </div>
+                <div class="carousel-item">
+                    <p>📅 <strong>Yeni nöbet takvimi oluşturuldu!</strong> Takvimi görmek için <a href="takvim.html" style="text-decoration: underline; color: #007bff;">Görmek için tıklayın</a>.</p>
+                </div>
+                <div class="carousel-item">
+                    <p>🎓 <strong>Seminer ve tatbikat duyuruları</strong> hakkında bilgi almak için duyuru alanını takip edin.</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev btn btn-secondary" type="button" data-bs-target="#announcementCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Önceki</span>
+            </button>
+            <button class="carousel-control-next btn btn-secondary" type="button" data-bs-target="#announcementCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sonraki</span>
+            </button>
+        </div>
+
+        
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 text-white" id="footer">
+    <div class="container text-center">
+        <p>&copy; 2024 SAÜ Pediatri Bölümü</p>
+        <p>Bize Ulaşın: <a href="mailto:info@sau.edu.tr" class="text-white">info@sau.edu.tr</a></p>
+        <div class="social-icons">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- JS Bağımlılıkları -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome İkonları İçin -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const carousel = new bootstrap.Carousel(document.getElementById("announcementCarousel"), {
+            interval: 5000, // Otomatik geçiş süresi (milisaniye)
+            wrap: true, // Son duyurudan sonra başa dönme
+            keyboard: true, // Klavye ile kontrol
+            pause: "hover", // Üzerine gelindiğinde durdur
+        });
+    });
+</script>
+</body>
+</html>

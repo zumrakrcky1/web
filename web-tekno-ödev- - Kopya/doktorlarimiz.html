@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Doktorlarımız</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .rating span {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pediatri Bölümü</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="örnek2.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="doktorlarimiz.html">Uzman Doktorlar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Uzman Doktorlar Kartları -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Uzman Doktorlarımız</h2>
+            <div class="row">
+          <!-- Uzman Doktor 1 -->
+<div class="col-md-4">
+    <div class="card">
+        <img src="C:\Users\Acer Predator\Downloads\prof2.avif" class="card-img-top" alt="Dr. Buse Kılıç">
+        <div class="card-body">
+            <h5 class="card-title">Dr. Buse Kılıç</h5>
+            <p class="card-text">Çocuk Kardiyolojisi Uzmanı</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#popup-buse">
+                Daha Fazla Bilgi
+            </button>
+        </div>
+    </div>
+</div>
+
+
+                <!-- Uzman Doktor 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\prof1.avif" class="card-img-top" alt="Dr. Ahmet Demir">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Ahmet Demir</h5>
+                            <p class="card-text">Çocuk Endokrinolojisi Uzmanı</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#popup-ahmet">
+                                Daha Fazla Bilgi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                   <!-- Uzman Doktor 3-->
+                   <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\prof3.jpg" class="card-img-top" alt="Dr. Sevda Kara">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Sevde Kara</h5>
+                            <p class="card-text">Çocuk Hematolojisi Uzmanı</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#popup-sevda">
+                                Daha Fazla Bilgi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- popup'lar -->
+ 
+    <!-- Uzman Doktor 1 Modal -->
+<div class="modal fade" id="popup-buse" tabindex="-1" aria-labelledby="popup-buse" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="popup-buseLabel">Dr. Buse Kılıç</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\prof2.avif" class="img-fluid" >
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 555 321 6548</p>
+                <p><strong>E-posta:</strong> buse.kilic@example.com</p>
+                <p><strong>Uzmanlık:</strong> Çocuk Kardiyolojisi</p>
+                <p><strong>Eğitim:</strong> İstanbul Üniversitesi Çocuk Kardiyolojisi Anabilim Dalı</p>
+                <p><strong>Hakkında:</strong> Çocuk kalp sağlığı ve hastalıkları konusunda uzmanlaşmış, yıllarca akademik deneyime sahip bir öğretim üyesidir. Hastanemizde Çocuk acil bölümünden sorumlu hocadır.</p>
+                <!-- Yıldız Puanlama -->
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating" style="display:none;">Puanı Gönder</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Uzman Doktor 2 Modal -->
+    <div class="modal fade" id="popup-ahmet" tabindex="-1" aria-labelledby="popup-ahmet" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popup-ahmetlabel">Dr. Ahmet Demir</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="C:\Users\Acer Predator\Downloads\prof1.avif" class="img-fluid" >
+                </div>
+                <div class="modal-body">
+                    <p><strong>Telefon:</strong> +90 555 789 1234</p>
+                    <p><strong>E-posta:</strong> ahmet.demir@example.com</p>
+                    <p><strong>Uzmanlık:</strong> Çocuk Endokrinolojisi</p>
+                    <p><strong>Eğitim:</strong> Hacettepe Üniversitesi Endokrinoloji Anabilim Dalı</p>
+                    <p><strong>Hakkında:</strong> Çocuklarda büyüme ve gelişim bozuklukları üzerine çalışmış, alanında önemli akademik katkıları olan bir öğretim üyesidir.Hastanemizde çocuk yoğun bakımı bölümünden sorumlu hocadır.</p>
+                    <!-- Yıldız Puanlama -->
+                    <div class="rating">
+                        <span data-value="5">&#9733;</span>
+                        <span data-value="4">&#9733;</span>
+                        <span data-value="3">&#9733;</span>
+                        <span data-value="2">&#9733;</span>
+                        <span data-value="1">&#9733;</span>
+                        <p class="rating-result">Puan: 0</p>
+                        <button class="submit-rating" style="display:none;">Puanı Gönder</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Uzman Doktor 3 Modal -->
+      <div class="modal fade" id="popup-sevda" tabindex="-1" aria-labelledby="popup-sevda" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popup-sevdalabel">Dr. Sevde Kara</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="C:\Users\Acer Predator\Downloads\prof3.jpg"class="img-fluid" >
+                </div>
+                <div class="modal-body">
+                    <p><strong>Telefon:</strong> +90 546 327 3441</p>
+                    <p><strong>E-posta:</strong> sevde.kara@example.com</p>
+                    <p><strong>Uzmanlık:</strong> Çocuk Hematolojisi</p>
+                    <p><strong>Eğitim:</strong> Hacettepe Üniversitesi Hematoloji Anabilim Dalı</p>
+                    <p><strong>Hakkında:</strong> Çocuklarda büyüme ve gelişim bozuklukları üzerine çalışmış, alanında önemli akademik katkıları olan bir öğretim üyesidir.Hastanemizde hematoloji ve onkoloji bölümünden sorumlu hocadır.</p>
+                    <!-- Yıldız Puanlama -->
+                    <div class="rating">
+                        <span data-value="5">&#9733;</span>
+                        <span data-value="4">&#9733;</span>
+                        <span data-value="3">&#9733;</span>
+                        <span data-value="2">&#9733;</span>
+                        <span data-value="1">&#9733;</span>
+                        <p class="rating-result">Puan: 0</p>
+                        <button class="submit-rating" style="display:none;">Puanı Gönder</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS ve Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Yıldız Puanlama ve Gönderme JavaScript -->
+    <script>
+        // Yıldızlara tıklanabilirlik ekleyelim
+        document.querySelectorAll('.rating span').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-value');
+                document.querySelector('.rating-result').textContent = `Puan: ${rating}`;
+                document.querySelectorAll('.rating span').forEach(star => {
+                    star.style.pointerEvents = 'none';
+                });
+                document.querySelector('.submit-rating').style.display = 'inline';
+            });
+        });
+
+        document.querySelector('.submit-rating').addEventListener('click', function() {
+            alert("Puan gönderildi!");
+            this.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>

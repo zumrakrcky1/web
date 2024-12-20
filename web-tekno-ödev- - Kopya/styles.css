@@ -1,0 +1,483 @@
+    /* Genel Stiller */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Hero Bölümü */
+.hero {
+    background: url(../../../Downloads/pediatri.avif) no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.navbar {
+    background-color: #7bcc7e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand, .nav-link {
+    color: white !important;
+  }
+  
+  .nav-link.active {
+    background-color: #2dc873;
+    color: #fff !important;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  /* Navbar'ı sabit tutma */
+nav.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;  /* Diğer öğelerin önünde olması için */
+}
+/* Flexbox ile düzenleme */
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left {
+    margin-right: auto;  /* Sol tarafta kalan menüyü sola itelim */
+}
+
+.navbar-right {
+    margin-left: auto;  /* Sağ tarafta kalan menüyü sağa itelim */
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-right: 15px; /* Menüler arasına boşluk bırakmak için */
+}
+.modal-header {
+    background-color:#7bcc7e; 
+    color: white;
+}
+
+/* Modal içeriği için stil */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Body İçin Arka Plan Rengi ve Padding */
+.modal-body {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Başlıklar İçin Renkli Stil */
+.modal-body h5 {
+    color:#7bcc7e;
+    font-weight: bold;
+}
+
+/* Dinamik Güncelleme Alanı */
+.modal-body input {
+    border-radius: 5px;
+    border: 2px solid #7bcc7e;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Güncelle Butonunun Renkli ve Hover Efekti */
+.btn-primary {
+    background-color: #7bcc7e;
+    border-color: #7bcc7e;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #7bcc7e;
+    border-color: #7bcc7e;
+}
+
+/* Kart Başlıkları İçin Renkli Stil */
+.card-title {
+    color: #010a01;
+    font-weight: bold;
+}
+
+/* Kart Arka Planı */
+.card-body {
+    background-color: #e3f2fd;
+    border-radius: 8px;
+}
+
+/* Modal Kapatma Butonuna Hover Ekleme */
+.btn-close {
+    color: #fff;
+}
+
+/* Modalın Kapanma Efekti */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translateY(0);
+}
+
+  
+.hero h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* Kartlar */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease;
+    
+}
+/* Kart Resimleri */
+.card-img-top {
+    height: 200px; /* Sabit bir yükseklik belirleyin */
+    object-fit: cover; /* Resmi kutuya uygun şekilde sığdırır */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.rating span {
+    font-size: 2em;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  
+  .rating span:hover, .rating span:hover ~ span {
+    color: gold;
+  }
+  
+  .rating span.selected {
+    color: gold;
+  }
+  
+  .submit-rating {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .submit-rating:hover {
+    background-color: #45a049;
+  }
+  
+
+/* Footer */
+footer {
+    background-color: #7bcc7e;
+   
+    color: white;
+    padding: 20px 0;
+}
+
+footer .social-icons a {
+    font-size: 1.5em;
+}
+/* Quiz Sayfası Stil Düzenlemeleri */
+
+/* Quiz Başlığı */
+.quiz-header {
+    text-align: center;
+    background-color: #7bcc7e; /* Başlık kısmını yeşil tonunda yapalım */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Sorular için Stil */
+.quiz-question {
+    background-color: #e3f2fd; /* Sorular için açık mavi arka plan */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+/* Soru Seçenekleri */
+.quiz-options label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #7bcc7e;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.quiz-options input[type="radio"] {
+    display: none; /* Radio butonlarını gizliyoruz */
+}
+
+.quiz-options label:hover {
+    background-color: #2dc873;
+    color: white;
+}
+
+.quiz-options input[type="radio"]:checked + label {
+    background-color: #2dc873;
+    color: white;
+}
+
+
+
+/* "Başla" Butonu */
+#startQuiz {
+    background-color: #2dc873;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#startQuiz:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Sonuç Bölümü */
+.result {
+    background-color: #e3f2fd;
+    color: #010a01;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Quiz Sonuç Tablosu */
+#resultsTable {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#resultsTable th, #resultsTable td {
+    padding: 10px;
+    border: 1px solid #7bcc7e;
+    text-align: center;
+}
+
+#resultsTable th {
+    background-color: #2dc873;
+    color: white;
+}
+
+#resultsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#resultsTable tr:hover {
+    background-color: #f1f1f1;
+}
+ /* Popup styles */
+ .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #7bcc7e;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-close:hover {
+    background: #0056b3;
+}
+
+.rating span {
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffd700;
+}
+
+.rating-result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Form Alanı Stil */
+.task-form {
+    margin-bottom: 30px;
+}
+
+.task-form input, .task-form textarea {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.task-form input:focus, .task-form textarea:focus {
+    border-color: #7bcc7e;
+    box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
+}
+
+.task-form button {
+    font-size: 18px;
+    background-color: #7bcc7e;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.task-form button:hover {
+    background-color: #7bcc7e;
+}
+
+/* Acil Durum Listesi Stil */
+.task-manager {
+    margin-top: 30px;
+}
+
+.list-group-item {
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-item div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item button {
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin-left: 10px;
+}
+
+.task-item button:hover {
+    opacity: 0.8;
+}
+
+.btn-warning {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+
+.btn-warning:hover {
+    background-color: #e67e22;
+}
+
+.btn-danger {
+    background-color: #e74a3b;
+    border-color: #e74a3b;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+
+/* Gelişmiş Responsive Düzen */
+@media (max-width: 768px) {
+    .task-form input, .task-form textarea, .task-form button {
+        width: 100%;
+    }
+
+    .task-item {
+        font-size: 14px;
+    }
+}
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    text-align: center;  /* İçeriğin yatayda ortalanması için */
+  }
+    /* Carousel'i yatayda ortalamak için stil */
+    .carousel-container {
+        display: flex;
+        justify-content: center; /* Yatayda ortalar */
+        align-items: center;     /* Dikeyde ortalar */
+        padding: 20px;
+    }
+
+    #announcementCarousel {
+        width: 80%;   /* Carousel genişliğini sınırlıyoruz */
+        max-width: 800px;  /* Maksimum genişlik belirliyoruz */
+    }
+

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistanlarımız</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pediatri Bölümü</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="örnek2.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="asistanlarimiz.html">Asistanlarımız</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Asistanlarımız Bölümü -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Asistanlarımız</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor1g.jpg" class="card-img-top" alt="Asistan 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Leyla Arslan </h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" onclick="showPopup('popup-leyla')">Daha Fazla Bilgi</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor4b.jpg" class="card-img-top" alt="Asistan 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.David Thompson</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" onclick="showPopup('popup-david')">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctorme.jpg" class="card-img-top" alt="Asistan 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Zümra Karacakaya</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" onclick="showPopup('popup-zumra')">Daha Fazla Bilgi</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor6b.jpg" class="card-img-top" alt="Asistan 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Mehmet Yılmaz</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" onclick="showPopup('popup-mehmet')">Daha Fazla Bilgi</button>
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor8b.jpg" class="card-img-top" alt="Asistan 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.John Carter</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" onclick="showPopup('popup-john')">Daha Fazla Bilgi</button>
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor2g.jpg" class="card-img-top" alt="Asistan 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Elif Kaya</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" onclick="showPopup('popup-elif')">Daha Fazla Bilgi</button>
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor3g.jpg" class="card-img-top" alt="Asistan 7">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Sophia Bennett</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asistan7Modal">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor5g.jpg" class="card-img-top" alt="Asistan 8">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Emily Watson</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asistan8Modal">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor9b.jpg" class="card-img-top" alt="Asistan 9">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Ali Çelik</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asistan9Modal">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor10b.jpg" class="card-img-top" alt="Asistan 10">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Alexander Blake</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asistan10Modal">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor7g.jpg" class="card-img-top" alt="Asistan 11">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Zeynep Öztürk</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asistan11Modal">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor13g.jpg" class="card-img-top" alt="Asistan 12">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Mia Collins</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asistan12Modal">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor11b.jpg" class="card-img-top" alt="Asistan 13">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Can Aksoy</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asistan13Modal">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor14g.jpg"class="card-img-top" alt="Asistan 14">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Olivia Harper</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asistan14Modal">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>  <div class="col-md-4">
+                    <div class="card">
+                        <img src="C:\Users\Acer Predator\Downloads\doctor12b.jpg" class="card-img-top" alt="Asistan 15">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Deniz Korkmaz</h5>
+                            <p class="card-text">İntern Doktor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asistan15Modal">Daha Fazla Bilgi</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal pop-up Yapısı --> 
+        <div class="popup-overlay" id="popup-leyla">
+            <div class="popup-content">
+                <button class="popup-close" onclick="closePopup('popup-leyla')">&times;</button>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popup-title">Dr. Leyla Arslan</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="C:\Users\Acer Predator\Downloads\doctor1g.jpg" alt="Doktor 1">
+                </div>
+                <div class="modal-body">
+                    <p><strong>Telefon:</strong> +90 555 123 4567</p>
+                    <p><strong>E-posta:</strong> leyla.arslan@example.com</p>
+                    <p><strong>Uzmanlık:</strong> Pediatri</p>
+                    <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                    <div class="rating">
+                        <span data-value="5" onclick="rate(5)">&#9733;</span>
+                        <span data-value="4" onclick="rate(4)">&#9733;</span>
+                        <span data-value="3" onclick="rate(3)">&#9733;</span>
+                        <span data-value="2" onclick="rate(2)">&#9733;</span>
+                        <span data-value="1" onclick="rate(1)">&#9733;</span>
+                        <p class="rating-result" id="rating-result">Puan: 0</p>
+                        <button class="submit-rating" onclick="submitRating()">Puanı Gönder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-overlay" id="popup-david">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('popup-david')">&times;</button>
+        <div class="modal-header">
+            <h5 class="modal-title" id="popup-title">Dr. David Thompson</h5>
+        </div>
+        <div class="modal-body text-center">
+            <img src="C:\Users\Acer Predator\Downloads\doctor4b.jpg" class="img-fluid" alt="Doktor 1">
+        </div>
+        <div class="modal-body">
+            <p><strong>Telefon:</strong> +90 555 455 7896</p>
+            <p><strong>E-posta:</strong> david.thompson@example.com</p>
+            <p><strong>Uzmanlık:</strong> Pediatri</p>
+            <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+            <div class="rating">
+                <span data-value="5" onclick="rate(5)">&#9733;</span>
+                <span data-value="4" onclick="rate(4)">&#9733;</span>
+                <span data-value="3" onclick="rate(3)">&#9733;</span>
+                <span data-value="2" onclick="rate(2)">&#9733;</span>
+                <span data-value="1" onclick="rate(1)">&#9733;</span>
+                <p class="rating-result" id="rating-result">Puan: 0</p>
+                <button class="submit-rating" onclick="submitRating()">Puanı Gönder</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+    </div>
+</div>
+</div>
+</div>
+<div class="popup-overlay" id="popup-zumra">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('popup-zumra')">&times;</button>
+        <div class="modal-header">
+            <h5 class="modal-title" id="popup-title">Dr. Zümra Karacakaya</h5>
+        </div>
+        <div class="modal-body text-center">
+            <img src="C:\Users\Acer Predator\Downloads\doctorme.jpg" class="img-fluid" alt="Dr. Zümra Karacakaya">
+        </div>
+        <div class="modal-body">
+            <p><strong>Telefon:</strong> +90 553 154 2170</p>
+            <p><strong>E-posta:</strong> zumra.krcky@example.com</p>
+            <p><strong>Uzmanlık:</strong> Pediatri</p>
+            <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+            <div class="rating">
+                <span data-value="5" onclick="rate(5)">&#9733;</span>
+                <span data-value="4" onclick="rate(4)">&#9733;</span>
+                <span data-value="3" onclick="rate(3)">&#9733;</span>
+                <span data-value="2" onclick="rate(2)">&#9733;</span>
+                <span data-value="1" onclick="rate(1)">&#9733;</span>
+                <p class="rating-result" id="rating-result-zumra">Puan: 0</p>
+                <button class="submit-rating" onclick="submitRating()">Puanı Gönder</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-overlay" id="popup-mehmet">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('popup-mehmet')">&times;</button>
+        <div class="modal-header">
+            <h5 class="modal-title">Dr. Mehmet Yılmaz</h5>
+        </div>
+        <div class="modal-body text-center">
+            <img src="C:\Users\Acer Predator\Downloads\doctor6b.jpg" class="img-fluid" alt="Dr. Mehmet Yılmaz">
+        </div>
+        <div class="modal-body">
+            <p><strong>Telefon:</strong> +90 555 146 7863</p>
+            <p><strong>E-posta:</strong> mehmet.yilmaz@example.com</p>
+            <p><strong>Uzmanlık:</strong> Pediatri</p>
+            <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+            <div class="rating">
+                <span data-value="5" onclick="rate(5)">&#9733;</span>
+                <span data-value="4" onclick="rate(4)">&#9733;</span>
+                <span data-value="3" onclick="rate(3)">&#9733;</span>
+                <span data-value="2" onclick="rate(2)">&#9733;</span>
+                <span data-value="1" onclick="rate(1)">&#9733;</span>
+                <p class="rating-result" id="rating-result-mehmet">Puan: 0</p>
+                <button class="submit-rating" onclick="submitRating()">Puanı Gönder</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-overlay" id="popup-john">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('popup-john')">&times;</button>
+        <div class="modal-header">
+            <h5 class="modal-title">Dr. John Carter</h5>
+        </div>
+        <div class="modal-body text-center">
+            <img src="C:\Users\Acer Predator\Downloads\doctor8b.jpg" class="img-fluid" alt="Dr. John Carter">
+        </div>
+        <div class="modal-body">
+            <p><strong>Telefon:</strong> +90 555 456 3025</p>
+            <p><strong>E-posta:</strong> john.carter@example.com</p>
+            <p><strong>Uzmanlık:</strong> Pediatri</p>
+            <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+            <div class="rating">
+                <span data-value="5" onclick="rate(5)">&#9733;</span>
+                <span data-value="4" onclick="rate(4)">&#9733;</span>
+                <span data-value="3" onclick="rate(3)">&#9733;</span>
+                <span data-value="2" onclick="rate(2)">&#9733;</span>
+                <span data-value="1" onclick="rate(1)">&#9733;</span>
+                <p class="rating-result" id="rating-result-john">Puan: 0</p>
+                <button class="submit-rating" onclick="submitRating()">Puanı Gönder</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Asistan 6 Popup -->
+<div class="popup-overlay" id="popup-elif">
+    <div class="popup-content">
+        <button class="popup-close" onclick="closePopup('popup-elif')">&times;</button>
+        <div class="modal-header">
+            <h5 class="modal-title">Dr. Elif Kaya</h5>
+        </div>
+        <div class="modal-body text-center">
+            <img src="C:\Users\Acer Predator\Downloads\doctor2g.jpg" class="img-fluid" alt="Dr. Elif Kaya">
+        </div>
+        <div class="modal-body">
+            <p><strong>Telefon:</strong> +90 555 487 3997</p>
+            <p><strong>E-posta:</strong> elif.kaya@example.com</p>
+            <p><strong>Uzmanlık:</strong> Pediatri</p>
+            <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+            <div class="rating">
+                <span data-value="5" onclick="rate(5)">&#9733;</span>
+                <span data-value="4" onclick="rate(4)">&#9733;</span>
+                <span data-value="3" onclick="rate(3)">&#9733;</span>
+                <span data-value="2" onclick="rate(2)">&#9733;</span>
+                <span data-value="1" onclick="rate(1)">&#9733;</span>
+                <p class="rating-result" id="rating-result-elif">Puan: 0</p>
+                <button class="submit-rating" onclick="submitRating()">Puanı Gönder</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="asistan7Modal" tabindex="-1" aria-labelledby="asistan7Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asistan7Label">Dr. Sophia Bennett</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\doctor3g.jpg" class="img-fluid" alt="Doktor 7">
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 555 976 3786</p>
+                <p><strong>E-posta:</strong> sophia.bennett@example.com</p>
+                <p><strong>Uzmanlık:</strong> Pediatri</p>
+                <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating">Puanı Gönder</button>
+                  </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="asistan8Modal" tabindex="-1" aria-labelledby="asistan8Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asistan8Label">Dr. Emily Watson</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\doctor5g.jpg" class="img-fluid" alt="Doktor 8">
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 555 610 3491</p>
+                <p><strong>E-posta:</strong> emily.watson@example.com</p>
+                <p><strong>Uzmanlık:</strong> Pediatri</p>
+                <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating">Puanı Gönder</button>
+                  </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="asistan9Modal" tabindex="-1" aria-labelledby="asistan9Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asistan9Label">Dr. Ali Çelik</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\doctor9b.jpg" class="img-fluid" alt="Doktor 1">
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 555 432 8302</p>
+                <p><strong>E-posta:</strong> ali.celik@example.com</p>
+                <p><strong>Uzmanlık:</strong> Pediatri</p>
+                <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating">Puanı Gönder</button>
+                  </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="asistan10Modal" tabindex="-1" aria-labelledby="asistan10Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asistan10Label">Dr.Alexander Blake</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\doctor10b.jpg" class="img-fluid" alt="Doktor 1">
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 553 485 3486</p>
+                <p><strong>E-posta:</strong> alexander.blake@example.com</p>
+                <p><strong>Uzmanlık:</strong> Pediatri</p>
+                <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating">Puanı Gönder</button>
+                  </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="asistan11Modal" tabindex="-1" aria-labelledby="asistan11Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asistan11Label">Dr. Zeynep Öztürk</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\doctor7g.jpg" class="img-fluid" alt="Doktor 1">
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 506 647 3065</p>
+                <p><strong>E-posta:</strong> zeynep.ozturk@example.com</p>
+                <p><strong>Uzmanlık:</strong> Pediatri</p>
+                <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating">Puanı Gönder</button>
+                  </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="asistan12Modal" tabindex="-1" aria-labelledby="asistan12Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asistan12Label">Dr. Mia Collins</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\doctor13g.jpg" class="img-fluid" alt="Doktor 1">
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 532 902 2222</p>
+                <p><strong>E-posta:</strong> mia.collins@example.com</p>
+                <p><strong>Uzmanlık:</strong> Pediatri</p>
+                <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating">Puanı Gönder</button>
+                  </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="asistan13Modal" tabindex="-1" aria-labelledby="asistan13Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asistan13Label">Dr. Can Aksoy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\doctor11b.jpg" class="img-fluid" alt="Doktor 1">
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 536 466 6060</p>
+                <p><strong>E-posta:</strong> can.aksoy@example.com</p>
+                <p><strong>Uzmanlık:</strong> Pediatri</p>
+                <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating">Puanı Gönder</button>
+                  </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="asistan14Modal" tabindex="-1" aria-labelledby="asistan14Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asistan14Label">Dr. Olivia Harper</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\doctor14g.jpg" class="img-fluid" alt="Doktor 1">
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 506 4212 2048</p>
+                <p><strong>E-posta:</strong> olivia.harper@example.com</p>
+                <p><strong>Uzmanlık:</strong> Pediatri</p>
+                <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating">Puanı Gönder</button>
+                  </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="asistan15Modal" tabindex="-1" aria-labelledby="asistan15Label" aria-hidden="true">Q11
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asistan15Label">Dr. Deniz Korkmaz</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="C:\Users\Acer Predator\Downloads\doctor12b.jpg" class="img-fluid" alt="Doktor 1">
+            </div>
+            <div class="modal-body">
+                <p><strong>Telefon:</strong> +90 563 487 3545</p>
+                <p><strong>E-posta:</strong> deniz.korkmaz@example.com</p>
+                <p><strong>Uzmanlık:</strong> Pediatri</p>
+                <p><strong>Hakkında:</strong> Çocuk sağlığı alanında stajyer doktor.</p>
+                <div class="rating">
+                    <span data-value="5">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="1">&#9733;</span>
+                    <p class="rating-result">Puan: 0</p>
+                    <button class="submit-rating">Puanı Gönder</button>
+                  </div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="js.js"></script>
+</body>
+
+</body>
+</html>

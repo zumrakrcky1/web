@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistanlarımız</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pediatri Bölümü</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="örnek2.html">Ana Sayfa</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form {
+            margin-bottom: 20px;
+        }
+        .form input, .form select, .form button {
+            margin: 5px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+        .day {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            min-height: 100px;
+        }
+        .header {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+        .shift {
+            margin: 5px 0;
+            padding: 5px;
+            background-color: #e0f7fa;
+            border-radius: 3px;
+            position: relative;
+        }
+        .shift button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            padding: 2px 5px;
+        }
+        .shift button:hover {
+            background-color: darkred;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .clear-all {
+            background-color: #dc3545;
+        }
+        .clear-all:hover {
+            background-color: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="form">
+        <input type="text" id="assistantName" placeholder="Doktor İsmi">
+        <input type="number" id="day" placeholder="Gün (1-30)" min="1" max="30">
+        <input type="text" id="timeRange" placeholder="Saat Aralığı (örn. 08:00-20:00)">
+        <select id="department">
+            <option value="Çocuk Acil">Çocuk Acil</option>
+            <option value="Çocuk Yoğun Bakım">Çocuk Yoğun Bakım</option>
+            <option value="Çocuk Hematolojisi">Çocuk Hematolojisi</option>
+        </select>
+        <button onclick="addShift()">Nöbeti Ekle</button>
+        <button class="clear-all" onclick="clearAllShifts()">Tümünü Temizle</button>
+    </div>
+
+    <div class="calendar" id="calendar">
+        <!-- Takvim burada oluşturulacak -->
+    </div>
+
+    <script>
+        let shifts = JSON.parse(localStorage.getItem("shifts")) || [];
+
+        function addShift() {
+            const name = document.getElementById("assistantName").value;
+            const day = parseInt(document.getElementById("day").value);
+            const timeRange = document.getElementById("timeRange").value;
+            const department = document.getElementById("department").value;
+
+            if (!name || !day || !timeRange || !department) {
+                alert("Lütfen tüm alanları doldurun!");
+                return;
+            }
+
+            shifts.push({ day, department, assistant: name, time: timeRange });
+            localStorage.setItem("shifts", JSON.stringify(shifts));
+            generateCalendar();
+
+            // Formu temizle
+            document.getElementById("assistantName").value = "";
+            document.getElementById("day").value = "";
+            document.getElementById("timeRange").value = "";
+            document.getElementById("department").value = "Çocuk Acil";
+        }
+
+        function deleteShift(index) {
+            shifts.splice(index, 1);
+            localStorage.setItem("shifts", JSON.stringify(shifts));
+            generateCalendar();
+        }
+
+        function clearAllShifts() {
+            if (confirm("Tüm nöbetleri silmek istediğinizden emin misiniz?")) {
+                shifts = [];
+                localStorage.setItem("shifts", JSON.stringify(shifts));
+                generateCalendar();
+            }
+        }
+
+        function generateCalendar() {
+            const calendar = document.getElementById("calendar");
+            calendar.innerHTML = ""; // Önce temizle
+
+            // Takvim başlığı
+            const daysOfWeek = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"];
+            daysOfWeek.forEach(day => {
+                const header = document.createElement("div");
+                header.className = "day header";
+                header.textContent = day;
+                calendar.appendChild(header);
+            });
+
+            // 30 günlük örnek takvim
+            for (let i = 1; i <= 30; i++) {
+                const day = document.createElement("div");
+                day.className = "day";
+                day.innerHTML = `<strong>Gün ${i}</strong>`;
+
+                // O günün nöbetlerini ekle
+                shifts.forEach((shift, index) => {
+                    if (shift.day === i) {
+                        const shiftDiv = document.createElement("div");
+                        shiftDiv.className = "shift";
+                        shiftDiv.innerHTML = `${shift.department}: ${shift.assistant} (${shift.time})`;
+
+                        const deleteButton = document.createElement("button");
+                        deleteButton.textContent = "Sil";
+                        deleteButton.onclick = () => deleteShift(index);
+                        shiftDiv.appendChild(deleteButton);
+
+                        day.appendChild(shiftDiv);
+                    }
+                });
+
+                calendar.appendChild(day);
+            }
+        }
+
+        // Sayfa yüklendiğinde takvimi oluştur
+        generateCalendar();
+    </script>
+</body>
+</html>

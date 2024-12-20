@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hastane Haberleri</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="C:\Users\Acer Predator\OneDrive\Desktop\web-tekno-ödev-ör\resimler\logo.icon.png" rel="icon">
+    <style>
+        /* Sayfa genel stil */
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Sayfa başlığı */
+        .page-title {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        /* Haber Kartları */
+        .news-card {
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-card-body {
+            padding: 20px;
+        }
+        .news-card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .news-card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+        .read-more {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sayfa Başlığı -->
+    <div class="container">
+        <h1 class="page-title">Hastane Haberleri</h1>
+    </div>
+
+    <!-- Haber Kartları -->
+    <div class="container">
+        <div class="row">
+            <!-- Haber 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="news-card">
+                    <img src="C:\Users\Acer Predator\OneDrive\Desktop\web-tekno-ödev-ör\resimler\serdivana-yeni-hastane-geliyorde5ea3phzm.jpg" alt="Haber Resmi">
+                    <div class="news-card-body">
+                        <h5 class="news-card-title">Yeni Hizmet Binası Açıldı</h5>
+                        <p class="news-card-text">Hastanemizin yeni hizmet binası, modern teknolojik altyapı ile hizmete girdi.</p>
+                        <a href="https://example.com/haber1" class="read-more" target="_blank">Haberi Oku</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Haber 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="news-card">
+                    <img src="C:\Users\Acer Predator\OneDrive\Desktop\web-tekno-ödev-ör\resimler\indir.jpeg" alt="Haber Resmi">
+                    <div class="news-card-body">
+                        <h5 class="news-card-title">Sağlık Haftası Etkinlikleri</h5>
+                        <p class="news-card-text">Sağlık Haftası kapsamında düzenlenen etkinlikler büyük ilgi gördü.</p>
+                        <a href="https://example.com/haber2" class="read-more" target="_blank">Haberi Oku</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Haber 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="news-card">
+                    <img src="C:\Users\Acer Predator\OneDrive\Desktop\web-tekno-ödev-ör\resimler\images.jpeg"alt="Haber Resmi">
+                    <div class="news-card-body">
+                        <h5 class="news-card-title">Yeni Pediatri Uzmanları Görevde</h5>
+                        <p class="news-card-text">Hastanemize katılan yeni pediatri uzmanları görevlerine başladı.</p>
+                        <a href="https://example.com/haber3" class="read-more" target="_blank">Haberi Oku</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
